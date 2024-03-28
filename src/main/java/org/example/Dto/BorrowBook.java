@@ -18,8 +18,9 @@ public class BorrowBook {
     private String borrowerEmail;
     private List<Long> books;
     private List<String> bookTitles;
-    private Date date;
+    private String date;
     private String status;
+    private String returnedDate;
     private double fine;
 
 }

@@ -1,11 +1,4 @@
 
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—²¦Ïşÿÿÿÿ8òÙÙ¥è1
-_
-java:S11264"BReplace this if-then-else statement by a single method invocation.(àóˆá8«ÚÙ¥è1
-u
-java:S1128
-"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡¸Îùÿÿÿÿ8­ÚÙ¥è1
-a
-java:S1128"DRemove this unused import 'org.springframework.http.HttpStatusCode'.(®å™Õ8®ÚÙ¥è1
-Q
-java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëİüÿÿÿÿ8®ÚÙ¥è1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—²¦Ïşÿÿÿÿ8ñÛ·è1
+d
+java:S11264"BReplace this if-then-else statement by a single method invocation.(ËÛÿíúÿÿÿÿ8¼ñÛ·è1

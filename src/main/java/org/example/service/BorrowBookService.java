@@ -10,5 +10,6 @@ public interface BorrowBookService {
     ResponseEntity<?> saveDetails(BorrowBook borrowBook);
     List<BorrowBookEntity> getAll();
     public ResponseEntity<?> isBorrowerExist(String borrowerName);
+    public Double calculateFineValue(BorrowBook borrowBook);
 
 }

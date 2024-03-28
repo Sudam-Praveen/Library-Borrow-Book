@@ -24,7 +24,7 @@ public class BorrowBookController {
         return ResponseEntity.ok(borrowBookService.saveDetails(borrowBook));
     }
 
-    @GetMapping("/getAll")
+    @GetMapping("/getAll-borrowed-details")
     public ResponseEntity<?> getAll() {
         List<BorrowBookEntity> all = borrowBookService.getAll();
         return ResponseEntity.ok(all);
@@ -33,5 +33,9 @@ public class BorrowBookController {
     @GetMapping("/find-exists-in-borrowedList/{borrowerName}")
     public ResponseEntity<?> findBorrower(@PathVariable String borrowerName) {
         return borrowBookService.isBorrowerExist(borrowerName);
+    }
+    @PostMapping("/find-the-fine")
+    public Double fineValue(@RequestBody BorrowBook borrowBook){
+         return borrowBookService.calculateFineValue(borrowBook);
     }
 }
