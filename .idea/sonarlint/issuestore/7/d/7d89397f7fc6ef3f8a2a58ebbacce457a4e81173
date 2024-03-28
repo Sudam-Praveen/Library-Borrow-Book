@@ -1,4 +1,11 @@
 
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—²¦Ïþÿÿÿÿ
-d
-java:S2094"BRemove this empty class, write its code or make it an "interface".(²¥ž¼ÿÿÿÿÿ8°õ¥Šè1
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(—²¦Ïþÿÿÿÿ8òÙÙ¥è1
+_
+java:S11264"BReplace this if-then-else statement by a single method invocation.(àóˆá8«ÚÙ¥è1
+u
+java:S1128
+"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸Îùÿÿÿÿ8­ÚÙ¥è1
+a
+java:S1128"DRemove this unused import 'org.springframework.http.HttpStatusCode'.(®å™Õ8®ÚÙ¥è1
+Q
+java:S1128"/Remove this unused import 'java.util.Optional'.(¨˜ëÝüÿÿÿÿ8®ÚÙ¥è1

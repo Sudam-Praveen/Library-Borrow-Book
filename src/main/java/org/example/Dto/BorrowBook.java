@@ -14,8 +14,12 @@ import java.util.List;
 public class BorrowBook {
     private Long id;
     private Long borrowerID;
+    private String borrowerName;
+    private String borrowerEmail;
     private List<Long> books;
+    private List<String> bookTitles;
     private Date date;
+    private String status;
     private double fine;
 
 }
