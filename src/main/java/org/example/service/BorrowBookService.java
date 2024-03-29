@@ -8,8 +8,9 @@ import java.util.List;
 
 public interface BorrowBookService {
     ResponseEntity<?> saveDetails(BorrowBook borrowBook);
-    List<BorrowBookEntity> getAll();
+    List<BorrowBookEntity> getAllBorrowedDetails();
     public ResponseEntity<?> isBorrowerExist(String borrowerName);
     public Double calculateFineValue(BorrowBook borrowBook);
+    public List<BorrowBookEntity> getAllReturnedDetails();
 
 }

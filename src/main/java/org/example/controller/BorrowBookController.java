@@ -26,12 +26,18 @@ public class BorrowBookController {
 
     @GetMapping("/getAll-borrowed-details")
     public ResponseEntity<?> getAll() {
-        List<BorrowBookEntity> all = borrowBookService.getAll();
+        List<BorrowBookEntity> all = borrowBookService.getAllBorrowedDetails();
+        return ResponseEntity.ok(all);
+    }
+    @GetMapping("/getAll-returned-details")
+    public ResponseEntity<?> getReturnedAll() {
+        List<BorrowBookEntity> all = borrowBookService.getAllReturnedDetails();
         return ResponseEntity.ok(all);
     }
 
     @GetMapping("/find-exists-in-borrowedList/{borrowerName}")
     public ResponseEntity<?> findBorrower(@PathVariable String borrowerName) {
+
         return borrowBookService.isBorrowerExist(borrowerName);
     }
     @PostMapping("/find-the-fine")

@@ -33,11 +33,21 @@ public class BorrowBookServiceImpl implements BorrowBookService {
     }
 
     @Override
-    public List<BorrowBookEntity> getAll() {
+    public List<BorrowBookEntity> getAllBorrowedDetails() {
         List<BorrowBookEntity> borrowingList = new ArrayList<>();
         List<BorrowBookEntity> all = borrowBookRepo.findAll();
         for (BorrowBookEntity borrowBookEntity : all) {
             if (borrowBookEntity.getStatus().equals("borrowed")) {
+                borrowingList.add(borrowBookEntity);
+            }
+        }
+        return borrowingList;
+    }
+    public List<BorrowBookEntity> getAllReturnedDetails() {
+        List<BorrowBookEntity> borrowingList = new ArrayList<>();
+        List<BorrowBookEntity> all = borrowBookRepo.findAll();
+        for (BorrowBookEntity borrowBookEntity : all) {
+            if (borrowBookEntity.getStatus().equals("returned")) {
                 borrowingList.add(borrowBookEntity);
             }
         }
@@ -51,8 +61,6 @@ public class BorrowBookServiceImpl implements BorrowBookService {
             for (BorrowBookEntity borrower : byBorrowerName) {
                 if (borrower.getStatus().equals("borrowed")) {
                     return ResponseEntity.status(HttpStatus.OK).body(true);
-                } else {
-                    return ResponseEntity.status(HttpStatus.OK).body(false);
                 }
             }
 
